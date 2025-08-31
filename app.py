@@ -92,5 +92,5 @@ gr.Interface(
     outputs=gr.Textbox(label="Generated SQL Query"),
     title="🧠 Text-to-SQL Generator (Spider-trained T5)",
     description="Enter a question and schema to generate SQL. Powered by T5 fine-tuned on Spider.",
-).launch(share=True)
+).launch(server_name="0.0.0.0", server_port=int(os.environ.get("PORT", 7860)))
 
