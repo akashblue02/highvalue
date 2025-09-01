@@ -69,6 +69,10 @@ app = gr.Interface(
 )
 
 # ✅ Launch with Render-compatible settings
+#if __name__ == "__main__":
+#    port = int(os.environ.get("PORT", 7860))
+#    app.launch(server_name="0.0.0.0", server_port=port)
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 7860))
+    import os
+    port = int(os.environ.get("PORT", 7860))  # Railway assigns PORT
     app.launch(server_name="0.0.0.0", server_port=port)
